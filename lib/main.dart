@@ -14,15 +14,31 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
             title: const Text('App')
         ),
-        body: Row(
-          children: [
-            // Flexible(child: Container(color: Colors.indigo), flex: 3),
-            // Flexible(child: Container(color: Colors.green), flex: 7)
-            Expanded(child: Container(color: Colors.blue)),
-              // flex:1과 같은 효과
-              // 꽉채우고 싶을때 사용
-            Container(width: 100, color: Colors.green,)
-          ],
+        body: Container(
+          height: 160,
+          padding: EdgeInsets.all(10),
+          child: Row(
+            children:[
+              Image.asset('dog.jpeg', width: 150),
+              Flexible(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Hi', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 50), ),
+                    Text('my name is doge.\nNice to meet you'),
+                    Text('2022.07.15', style: TextStyle(color: Colors.black45)),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Icon(Icons.favorite, color: Colors.deepOrange,),
+                        Text('4', style: TextStyle(color: Colors.black45))
+                      ],
+                    )
+                  ],
+                ), flex: 1
+              )
+            ]
+          )
         )
       )
     );
