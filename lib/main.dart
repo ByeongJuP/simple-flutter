@@ -12,17 +12,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-            // title: const Text('App')
-            // leading: Icon(Icons.star), title: Text('app')
-            actions: [Icon(Icons.star), Icon(Icons.star)]
+            title: const Text('App')
         ),
-        body: const SizedBox(
-          // child: [ Text( "Hello", style: TextStyle(color: Color(0xff953636), fontSize: 30, fontWeight: FontWeight.w700),),]
-          // child: ElevatedButton(
-          //   child: Text('Hello'), onPressed: null, style: ButtonStyle()
-          // )
-          child: IconButton(icon: Icon(Icons.star), onPressed: null,)
-
+        body: Row(
+          children: [
+            // Flexible(child: Container(color: Colors.indigo), flex: 3),
+            // Flexible(child: Container(color: Colors.green), flex: 7)
+            Expanded(child: Container(color: Colors.blue)),
+              // flex:1과 같은 효과
+              // 꽉채우고 싶을때 사용
+            Container(width: 100, color: Colors.green,)
+          ],
         )
       )
     );
