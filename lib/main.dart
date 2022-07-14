@@ -11,29 +11,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar( title: const Text('App')),
-        body: Align(
-          alignment: Alignment.topCenter,
-          child: Container(
-            width: double.infinity, height: 50, margin: EdgeInsets.all(10), padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.black)
-            ),
-          ),
+        appBar: AppBar(
+            // title: const Text('App')
+            // leading: Icon(Icons.star), title: Text('app')
+            actions: [Icon(Icons.star), Icon(Icons.star)]
         ),
-        bottomNavigationBar: BottomAppBar(
-          child: SizedBox(
-            height: 50,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: const [
-                Icon(Icons.phone),
-                Icon(Icons.message),
-                Icon(Icons.contact_page)
-              ],
-            ),
-          ),
-        ),
+        body: const SizedBox(
+          // child: [ Text( "Hello", style: TextStyle(color: Color(0xff953636), fontSize: 30, fontWeight: FontWeight.w700),),]
+          // child: ElevatedButton(
+          //   child: Text('Hello'), onPressed: null, style: ButtonStyle()
+          // )
+          child: IconButton(icon: Icon(Icons.star), onPressed: null,)
+
+        )
       )
     );
   }
