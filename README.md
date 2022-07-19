@@ -6,11 +6,13 @@ A new Flutter project.
 
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# Custom Widget
+## StatelessWidget
+- 생성된 class의 `return`에 원하는 형식값 넣어준다.
+- 재사용이 많은 UI들을 커스텀화 하는게 좋음.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## ListView
+- 스크롤바 자동생성
+- 스크롤 위치 감시 가능
+- 메모리 절약 가능
